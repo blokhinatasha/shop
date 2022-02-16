@@ -1,0 +1,49 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@mixin fonts ($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin btn-link-act ($color, $colorbckg) {
+
+    &:hover,
+    &:focus {
+        color: $color;
+        background: $colorbckg;
+        border: 1px solid $color;
+        transition: 0.7s;
+    }
+
+    &:active {
+        color: black;
+    }
+}
+
+@mixin input-act () {
+
+    &:hover,
+    &:focus {
+        border: 1px solid $pink;
+    }
+
+}

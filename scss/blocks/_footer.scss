@@ -1,0 +1,122 @@
+.footer-feedback {
+    background-image: url(../images/footer-backg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    background-size: cover;
+
+    &-wrp {
+        @include flex-between ();
+        padding: 86px 0 126px 0;
+    }
+}
+
+.footer-feedback__quote {
+    @include flex-column ();
+
+    &-text {
+        width: 360px;
+        @include fonts (20px, 400, 24px);
+        text-align: center;
+        margin-top: 30px;
+
+        &_italics {
+            font-style: italic;
+        }
+    }
+}
+
+.footer-feedback__subscribe {
+    @include flex-column ();
+
+    &-text {
+        @include flex-column ();
+        @include fonts (24px, 700, 40px);
+        margin-bottom: 32px;
+
+        &-details {
+            @include fonts (18px, 400, 30px);
+        }
+    }
+
+    &-form-wrp {
+        display: flex;
+    }
+}
+
+
+.footer-feedback__subscribe-form-input {
+    height: 49px;
+    width: 256px;
+    padding: 7px 0 6px 22px;
+    box-sizing: border-box;
+    background: $verylightgray;
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    @include fonts (14px, 400, 17px);
+    @include input-act;
+    color: $darkgray;
+    outline: none;
+}
+
+
+.footer-feedback__subscribe-form-button {
+    height: 49px;
+    width: 100px;
+    padding: 7px 7px 6px 0;
+    box-sizing: border-box;
+    background: $pink;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    @include fonts (14px, 400, 17px);
+    @include btn-link-act ($pink, $white);
+    color: $white;
+}
+
+
+.footer-network {
+    background-color: $darkgray;
+}
+
+.footer-network-wrp {
+    padding: 30px 0 30px 0;
+    @include flex-between ();
+}
+
+.footer__rights {
+    @include fonts (16px, 400, 19px);
+    color: $verylightgray;
+
+}
+
+.footer__social-list {
+    display: flex;
+    gap: 7px;
+}
+
+.footer__social-item {
+    display: flex;
+}
+
+.footer__social-link svg {
+    fill: $black;
+}
+
+.footer__social-link {
+    background: $white;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+}
+
+.footer__social-link:hover {
+    background: $pink;
+    transition: 0.7s;
+}
+
+.footer__social-link:hover svg {
+    fill: $white;
+}

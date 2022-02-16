@@ -1,0 +1,60 @@
+.header {
+    background-color: $black;
+    position: relative;
+}
+
+.header__wrp {
+    @include flex-between;
+    min-height: 75px;
+}
+
+.header__logo-search {
+    display: flex;
+    align-items: center;
+}
+
+.header__search {
+    margin: 0 0 0 41px;
+    display: flex;
+    align-items: center;
+
+    &-input {
+        height: 50px;
+        width: 200px;
+        padding: 7px 0 6px 22px;
+        box-sizing: border-box;
+        background: $verylightgray;
+        border: none;
+        border-radius: 50px;
+        @include fonts (14px, 400, 17px);
+        @include input-act;
+        color: $darkgray;
+        outline: none;
+        display: none;
+    }
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__link {
+    margin: 0 0 0 33px;
+
+    &-svg {
+        fill: $verylightgray;
+    }
+}
+
+.burger-btn {
+    background-color: transparent;
+}
+
+
+.header__search:hover .header__search-input {
+    display: block;
+}
+
+.header__link-svg:hover {
+    fill: $pink;
+}

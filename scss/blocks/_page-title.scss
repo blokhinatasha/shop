@@ -1,0 +1,37 @@
+.page-title {
+    background-color: $pink-bckg;
+
+    &-wrp {
+        @include flex-between;
+    }
+
+    &_name {
+        padding: 60px 0 60px 0;
+        text-transform: uppercase;
+        @include fonts (24px, 400, 29px);
+        color: $pink;
+    }
+}
+
+.page-title_breadcrumbs {
+    display: flex;
+
+    & a {
+        text-decoration: none;
+        @include fonts (14px, 300, 17px);
+        text-transform: uppercase;
+        color: $gray;
+    }
+
+    & li+li:before {
+        padding: 8px;
+        color: $black;
+        content: "/";
+        color: $gray;
+    }
+
+    & li a:hover {
+        font-weight: 700;
+        color: $pink;
+    }
+}

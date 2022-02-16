@@ -1,0 +1,35 @@
+.brand {
+    background-color: $verylightgray;
+    margin-bottom: 65px;
+
+    &-wrp {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        background-image: url(../images/man.png);
+        height: 764px;
+        width: 600px;
+        background-position: -200px;
+    }
+
+    &__title {
+        @include fonts (48px, 900, 58px);
+
+        &-wrp {
+            text-transform: uppercase;
+            border-left: 12px solid $pink;
+            padding-left: 16px;
+        }
+    }
+
+    &__subtitle {
+        @include fonts (32px, 700, 38px);
+
+        &_pink {
+            color: $pink;
+            display: inline;
+        }
+    }
+}

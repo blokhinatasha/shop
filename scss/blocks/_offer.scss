@@ -1,0 +1,30 @@
+.offer {
+    background-color: $darkgray;
+
+    &__list {
+        display: flex;
+        padding: 103px 0 103px 0;
+        justify-content: space-between;
+    }
+
+    &__item {
+        @include flex-column ();
+        width: 360px;
+
+        &-img {
+            margin-bottom: 20px;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            @include fonts (20px, 400, 24px);
+            color: $white;
+        }
+
+        &-description {
+            @include fonts (14px, 300, 17px);
+            color: $white;
+            text-align: center;
+        }
+    }
+}

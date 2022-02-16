@@ -1,0 +1,182 @@
+.catalog {
+    margin-top: 51px;
+    margin-bottom: 97px;
+}
+
+.catalog__filter {
+    margin: 0 0 64px 0;
+    @include flex-center ();
+    position: relative;
+
+    &-btn {
+        color: $black;
+        @include fonts (14px, 600, 17px);
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+
+        & svg {
+            margin-left: 11px;
+            fill: $black;
+        }
+    }
+
+    &-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $black;
+        @include fonts (14px, 600, 17px);
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+}
+
+.catalog__filter-dropdown {
+    position: absolute;
+    left: 0;
+
+    &-btn {
+        @include fonts (14px, 600, 17px);
+        letter-spacing: 0em;
+        text-align: left;
+        color: $pink;
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+
+        & svg {
+            margin-left: 11px;
+            fill: $pink;
+        }
+    }
+}
+
+.catalog__filter-checkbox-list {
+    display: flex;
+}
+
+.catalog__filter-checkbox-item {
+    margin-right: 28px;
+    position: relative;
+}
+
+.catalog__filter-checkbox-button {
+    border: none;
+    background-color: transparent;
+    @include fonts (14px, 400, 17px);
+    text-transform: uppercase;
+    color: $gray;
+
+    & svg {
+        margin-left: 10px;
+        fill: $gray;
+    }
+}
+
+.catalog__filter-checkbox-dropdown {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: $white;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    box-sizing: border-box;
+    padding: 9px 0 9px 9px;
+    gap: 10px;
+    text-transform: uppercase;
+    @include fonts (14px, 400, 16px);
+    color: $gray;
+
+    &_range {
+        display: none;
+        position: absolute;
+        top: 100%;
+        background: $white;
+        padding: 10px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        width: 100px;
+
+        & input {
+            width: 100%;
+        }
+    }
+
+    & input {
+        margin-right: 9px;
+    }
+}
+
+input[type='range'] {
+    -webkit-appearance: none !important;
+    background: $pink;
+    height: 2px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: $pink;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+datalist {
+    display: block;
+    display: flex;
+
+    & option {
+        color: $gray;
+        @include fonts (14px, 400, 16px);
+    }
+}
+
+.catalog__pages {
+    @include flex-center ();
+    align-self: center;
+
+    &-wrp {
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+        border: 1px solid $verylightgray;
+
+        & svg {
+            fill: $black;
+        }
+    }
+
+    &-list {
+        display: flex;
+        width: 283px;
+        justify-content: space-between;
+        @include fonts (16px, 300, 19px);
+        color: $verylightgray;
+        margin: 0 18px 0 18px;
+    }
+}
+
+.catalog__pages-item:hover {
+    color: $pink;
+    cursor: pointer;
+}
+
+.catalog__filter-dropdown:hover .catalog__filter-menu {
+    display: block;
+}
+
+.catalog__item:hover {
+    box-shadow: 17px 19px 24px 0px #00000021;
+}
+
+
+.catalog__filter-checkbox-item:hover .catalog__filter-checkbox-dropdown,
+.catalog__filter-checkbox-item:hover .catalog__filter-checkbox-dropdown_range {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

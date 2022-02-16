@@ -1,0 +1,163 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 128px;
+}
+
+.cart__purchase-list {
+    margin-bottom: 73px;
+}
+
+.cart__purchase-item {
+    display: flex;
+    width: 652px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px 0px #00000021;
+}
+
+.cart__purchase-info {
+    margin-left: 31px;
+    width: 262px;
+    padding-top: 22px;
+    padding-left: 31px;
+
+    &-title {
+        @include fonts (24px, 400, 29px);
+        color: $darkgray;
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+
+    &-item {
+        margin-bottom: 6px;
+        @include fonts (22px, 400, 26px);
+        color: $gray;
+
+        & span {
+            color: $pink;
+        }
+
+        & input {
+            width: 43px;
+            margin-left: 24px;
+            border: 1px solid $grayborder;
+            @include input-act;
+        }
+    }
+}
+
+.cart__purchase-delete {
+    padding: 28px 22px 0 0;
+}
+
+.cart__purchase-action {
+    display: flex;
+    justify-content: space-between;
+
+    &-button {
+        padding: 16px 40px;
+        @include fonts (14px, 300, 17px);
+        @include btn-link-act ($white, $gray);
+        color: $gray;
+        border: 1px solid $gray;
+        text-transform: uppercase;
+        background: transparent;
+    }
+
+    &-link {
+        text-decoration: none;
+        @include fonts (14px, 300, 17px);
+        @include btn-link-act ($white, $gray);
+        color: $gray;
+        text-transform: uppercase;
+        padding: 16px 40px;
+        border: 1px solid $gray;
+    }
+}
+
+.cart__order {
+    width: 360px;
+}
+
+.cart__forms {
+    display: flex;
+    flex-direction: column;
+
+    & legend {
+        margin-bottom: 20px;
+        @include fonts (16px, 300, 19px);
+        color: $darkgray;
+        text-transform: uppercase;
+    }
+
+    & input {
+        width: 360px;
+        padding: 12px 0 12px 17px;
+        box-sizing: border-box;
+        border: 1px solid $grayborder;
+        margin-bottom: 21px;
+        @include fonts (13px, 300, 16px);
+        @include input-act;
+        color: $lightgray;
+    }
+
+    & button {
+        @include fonts (11px, 300, 13px);
+        @include btn-link-act ($white, $gray);
+        background-color: $white;
+        color: $gray;
+        border: 1px solid $grayborder;
+        padding: 9px 14px;
+        text-transform: uppercase;
+    }
+}
+
+.cart__total {
+    margin-top: 57px;
+    height: 214px;
+    width: 360px;
+    background: $verylightgray;
+
+    &-box {
+        padding: 42px;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    &-sub {
+        @include fonts (11px, 400, 13px);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &-grand {
+        @include fonts (16px, 300, 19px);
+        text-transform: uppercase;
+
+        & span {
+            font-weight: 700;
+            color: $pink;
+        }
+    }
+
+    &-border {
+        height: 1px;
+        background: $gray;
+        margin-top: 21px;
+        margin-bottom: 17px;
+    }
+
+    &-submit {
+        @include fonts (16px, 300, 19px);
+        @include btn-link-act ($pink, $white);
+        color: $white;
+        background-color: $pink;
+        padding: 15px 20px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        border: none;
+    }
+}

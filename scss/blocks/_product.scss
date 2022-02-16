@@ -1,0 +1,127 @@
+.product-slider {
+    position: relative;
+    margin-bottom: 665px;
+}
+
+.product-slider__control {
+    padding: 0;
+    border: none;
+
+    & svg {
+        fill: $black;
+        padding: 13px 13px 13px 17px;
+        background-color: rgba(42, 42, 42, 0.15);
+    }
+
+    &_right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        & svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &_left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+}
+
+.product-slider__picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.product-slider__feature {
+    background-color: $white;
+    position: absolute;
+    height: 601px;
+    width: 1140px;
+    top: 90%;
+    left: 0%;
+    right: 0%;
+    @include flex-column;
+    text-align: center;
+    border: 1px solid $grayborder;
+}
+
+.product-slider__info-title {
+    @include fonts (14px, 300, 17px);
+    color: $pink;
+    text-transform: uppercase;
+    padding-top: 65px;
+}
+
+.product-slider__info-line {
+    height: 3px;
+    background: $pink;
+    border: none;
+    width: 63px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.product-slider__info-subtitle {
+    @include fonts (18px, 300, 22px);
+    color: $darkgray;
+    text-transform: uppercase;
+}
+
+.product-slider__info-text {
+    @include fonts (14px, 300, 17px);
+    width: 555px;
+    color: $gray;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.product-slider__info-price {
+    @include fonts (24px, 300, 29px);
+    color: $pink;
+}
+
+.product-slider__line {
+    margin-top: 65px;
+    margin-bottom: 65px;
+    width: 641px;
+    height: 1px;
+    background: $verylightgray;
+    border: none;
+}
+
+.product-slider__add {
+    padding: 0;
+    margin-top: 64px;
+    border: 1px solid $pink;
+    @include fonts (16px, 400, 19px);
+    @include btn-link-act ($white, $pink);
+    color: $pink;
+    background-color: transparent;
+
+    & svg {
+        fill: $pink;
+        margin-right: 23px;
+    }
+}
+
+.product-slider__add-wrp {
+    padding: 14px 23px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.product-slider__add:hover .product-slider__add-wrp-svg {
+    fill: $white;
+    transition: 0.7s;
+}
+
+
+.product-slider__control:hover .product-slider__control-svg {
+    fill: $pink;
+}

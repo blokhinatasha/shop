@@ -1,0 +1,119 @@
+.join {
+    margin-top: 64px;
+    margin-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join__forms {
+    width: 360px;
+
+    & fieldset {
+        display: flex;
+        flex-direction: column;
+        @include fonts (16px, 300, 19px);
+        color: $darkgray;
+        gap: 20px;
+    }
+
+    & legend {
+        margin-bottom: 20px;
+    }
+
+    &-text {
+        @include fonts (13px, 300, 16px);
+        @include input-act;
+        padding: 13px 0 13px 16px;
+        border: 1px solid $lightgray;
+        width: 360px;
+    }
+
+    &-gender {
+        margin-top: 34px;
+        margin-bottom: 34px;
+        display: flex;
+        margin-left: 30px;
+    }
+
+    &-margin {
+        margin-right: 60px;
+    }
+
+    &-login {
+        margin-top: 25px;
+    }
+}
+
+[type="radio"] {
+    display: none;
+}
+
+
+[type="radio"]:checked+.label:before {
+    background: $pink;
+    transition: 0.2s;
+}
+
+.label {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 17px;
+        min-height: 17px;
+        border: 1px solid $lightgray;
+        border-radius: 50%;
+        left: -30px;
+    }
+}
+
+
+.join__password-text {
+    margin-top: 15px;
+    @include fonts (13px, 300, 16px);
+    color: $gray;
+}
+
+.join__button {
+    margin-top: 39px;
+    padding: 16px 25px;
+    height: 50px;
+    @include fonts (14px, 400, 17px);
+    @include btn-link-act ($pink, $white);
+    color: $white;
+    background-color: $pink;
+    font-family: Lato;
+    text-transform: uppercase;
+    border: none;
+    box-sizing: border-box;
+}
+
+.fa-arrow-right {
+    padding-left: 25px;
+}
+
+.join__loyalty {
+    width: 652px;
+    @include fonts (24px, 300, 29px);
+    color: $black;
+
+    &-title {
+        text-transform: uppercase;
+        margin-bottom: 22px;
+    }
+
+    &-text {
+        margin-bottom: 22px;
+    }
+
+    &-list {
+        list-style-image: url('../images/loyalty-item.png');
+    }
+
+    &-item {
+        margin-left: 23px;
+        padding-bottom: 16px;
+        padding-left: 23px;
+    }
+}
