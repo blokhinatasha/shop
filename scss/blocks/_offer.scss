@@ -5,11 +5,27 @@
         display: flex;
         padding: 103px 0 103px 0;
         justify-content: space-between;
+
+        @include tablet {
+            @include flex-column;
+        }
+
+        @include mobile {
+            @include flex-column;
+        }
     }
 
     &__item {
         @include flex-column ();
         width: 360px;
+
+        @include tablet {
+            margin-bottom: 49px;
+        }
+
+        @include mobile {
+            margin-bottom: 49px;
+        }
 
         &-img {
             margin-bottom: 20px;

@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include mobile {
+        @include flex-column;
+    }
 }
 
 .sales__item {
@@ -10,14 +14,44 @@
     @include flex-column;
     justify-content: center;
 
+    @include tablet {
+        height: 168px;
+        width: 232px;
+    }
+
+    @include mobile {
+        height: 247px;
+        width: 343px;
+        @include flex-column;
+        margin-bottom: 32px;
+
+    }
+
     &-link {
         text-decoration: none;
         display: block;
         text-align: center;
         padding: 105px 103px;
 
+        @include tablet {
+            padding: 59px 39px;
+        }
+
+        @include mobile {
+            padding: 98px 95px;
+        }
+
+
         &_wide {
             padding: 65px 475px;
+
+            @include tablet {
+                padding: 33px 288px;
+            }
+
+            @include mobile {
+                padding: 30px 92px;
+            }
         }
     }
 
@@ -52,4 +86,12 @@
     height: 180px;
     background-repeat: no-repeat;
     margin-top: 30px;
+
+    @include tablet {
+        margin-top: 20px;
+    }
+
+    @include mobile {
+        margin-top: 0;
+    }
 }

@@ -4,6 +4,16 @@
     text-align: center;
     @include fonts (30px, 400, 36px);
     color: $black;
+
+    @include tablet {
+        margin-top: 154px;
+        margin-bottom: 3px;
+    }
+
+    @include mobile {
+        margin-top: 64px;
+        margin-bottom: 3px;
+    }
 }
 
 .products__subtitle {
@@ -12,6 +22,14 @@
     @include fonts (14px, 400, 17px);
     letter-spacing: 0em;
     margin-bottom: 48px;
+
+    @include tablet {
+        margin-bottom: 73px;
+    }
+
+    @include mobile {
+        margin-bottom: 65px;
+    }
 }
 
 .products__list {
@@ -88,7 +106,17 @@
         text-align: center;
         margin-top: 18px;
         margin-bottom: 109px;
+
+        @include tablet {
+            margin-bottom: 65px;
+        }
+
+        @include mobile {
+            margin-bottom: 96px;
+        }
     }
+
+
 }
 
 .products__item:hover {

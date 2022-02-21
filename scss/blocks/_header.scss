@@ -44,6 +44,11 @@
     &-svg {
         fill: $verylightgray;
     }
+
+    @include mobile {
+        display: none;
+    }
+
 }
 
 .burger-btn {
