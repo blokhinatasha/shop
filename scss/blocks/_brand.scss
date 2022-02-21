@@ -2,16 +2,41 @@
     background-color: $verylightgray;
     margin-bottom: 65px;
 
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    @include mobile {
+        margin-bottom: 64px;
+    }
+
     &-wrp {
         display: flex;
         align-items: center;
+
+        @include mobile {
+            min-height: 363px;
+        }
+
+        @include flex-center;
     }
 
     &__img {
         background-image: url(../images/man.png);
         height: 764px;
         width: 600px;
-        background-position: -200px;
+        background-position: 100%;
+        object-fit: fill;
+
+        @include tablet {
+            background-image: url(../images/man-tablet.png);
+            width: 386px;
+            height: 368px;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__title {
@@ -22,6 +47,14 @@
             border-left: 12px solid $pink;
             padding-left: 16px;
         }
+
+        @include tablet {
+            @include fonts (44px, 900, 53px);
+        }
+
+        @include mobile {
+            @include fonts (38px, 900, 45px);
+        }
     }
 
     &__subtitle {
@@ -30,6 +63,14 @@
         &_pink {
             color: $pink;
             display: inline;
+        }
+
+        @include tablet {
+            @include fonts (24px, 700, 29px);
+        }
+
+        @include mobile {
+            @include fonts (20px, 700, 24px);
         }
     }
 }
